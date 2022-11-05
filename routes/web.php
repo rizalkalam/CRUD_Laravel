@@ -5,6 +5,7 @@ use App\Models\Book;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\PublisherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,11 +25,10 @@ Route::get('/', function () {
 Route::get('/about', [AboutController::class, 'index']);
 
 Route::get('/book', [BookController::class, 'index']);
-Route::get('/detail_book/{id}', [BookController::class, 'show']);
+Route::get('/detail_book/{book}', [BookController::class, 'show']);
 
-Route::get('/publisher', function () {
-    return view('publisher');
-});
+Route::get('/publisher', [PublisherController::class, 'index']);
+Route::get('/detail_publisher/{publishers}', [PublisherController::class, 'show']);
 // Route::get('/about', function () {
 //     return view('about');
 // });

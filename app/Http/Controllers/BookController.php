@@ -16,10 +16,11 @@ class BookController extends Controller
         ]);
     }
 
-    public function show($id)
+    public function show(Book $book)
     {
         return view('detail_book', [
-            'book'=>Book::find($id)
+            'book'=>$book
         ]);    
+        
     }
 }

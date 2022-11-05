@@ -20,12 +20,12 @@
                             <tbody>
                                 @foreach ($books as $book)
                               <tr>
-                                <td>{{ $book['id'] }}</td>
-                                <td>{{ $book['nama'] }}</td>
-                                <td >{{ $book['publisher'] }}</td>
-                                <td >{{ $book['harga'] }}</td>
+                                <td>{{ $book->id }}</td>
+                                <td>{{ $book->nama }}</td>
+                                <td >{{ $book->publisher }}</td>
+                                <td >{{ $book->harga }}</td>
                                 <td>
-                                    <a type="button" class="btn btn-primary"  href="detail_book/{{ $book['id'] }}" >Detail</a>
+                                    <a type="button" class="btn btn-primary"  href="detail_book/{{ $book->id }}" >Detail</a>
                                 </td>
                               </tr>
                             </tbody>
