@@ -2,12 +2,16 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Book extends Model
 {
     use HasFactory;
 
-    public $fillable = ['nama', 'publisher', 'harga', 'rilis'];
+    public function publisher()
+    {
+        return $this->belongsTo(Publisher::class);
+    }
 }

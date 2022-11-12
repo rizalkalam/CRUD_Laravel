@@ -1,7 +1,6 @@
+
 @extends('layouts.main')
 @section('content')
-      
-
 <div class="container">
     <h3 class="text-center mt-3">Data</h3>
         <div class="card">
@@ -13,20 +12,20 @@
                                 <tr>
                                     <th scope="col">#</th>
                                     <th scope="col">nama</th>
-                                    <th scope="col">email</th>
-                                    <th scope="col">almat</th>
+                                    <th scope="col">pengarang</th>
+                                    <th scope="col">harga</th>
                                     <th scope="col">aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($publishers as $publisher)
+                                @foreach ($books as $book)
                               <tr>
-                                <td>{{ $publisher->id }}</td>
-                                <td>{{ $publisher->nama }}</td>
-                                <td >{{ $publisher->email }}</td>
-                                <td >{{ $publisher->alamat }}</td>
+                                <td>{{ $book->id }}</td>
+                                <td>{{ $book->nama }}</td>
+                                <td >{{ $book->author }}</td>
+                                <td >{{ $book->harga }}</td>
                                 <td>
-                                    <a type="button" class="btn btn-primary"  href="detail_publisher/{{ $publisher->id }}" >Detail</a>
+                                    <a type="button" class="btn btn-primary"  href="/book/detail/{{ $book->id }}" >Detail</a>
                                 </td>
                               </tr>
                             </tbody>
@@ -39,5 +38,4 @@
 </div>
 
     
-
 @endsection

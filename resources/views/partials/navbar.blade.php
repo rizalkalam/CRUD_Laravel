@@ -10,10 +10,10 @@
             <a class="nav-link active" aria-current="page" href="/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/book">Book</a>
+            <a class="nav-link" href="/book/all">Book</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/publisher">Publisher</a>
+            <a class="nav-link" href="/publisher/all">Publisher</a>
           </li>
           
         </ul>

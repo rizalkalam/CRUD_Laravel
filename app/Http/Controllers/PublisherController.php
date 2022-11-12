@@ -10,14 +10,14 @@ class PublisherController extends Controller
 {
     public function index()
     {
-        return view('publisher',[
+        return view('publisher.all',[
             'publishers'=>Publisher::all()
         ]);
     }
 
     public function show(Publisher $publishers)
     {
-        return view('detail_publisher', [
+        return view('publisher.detail', [
             'publisher'=>$publishers
         ]);    
         

@@ -24,11 +24,17 @@ Route::get('/', function () {
 
 Route::get('/about', [AboutController::class, 'index']);
 
-Route::get('/book', [BookController::class, 'index']);
-Route::get('/detail_book/{book}', [BookController::class, 'show']);
+Route::group(["prefix" => "/book"], function(){
+    Route::get('/all', [BookController::class, 'index']);
+    Route::get('/detail/{book}', [BookController::class, 'show']);
+});
 
-Route::get('/publisher', [PublisherController::class, 'index']);
-Route::get('/detail_publisher/{publishers}', [PublisherController::class, 'show']);
+Route::group(["prefix"=>"/publisher"], function(){
+    Route::get('/all', [PublisherController::class, 'index']);
+    Route::get('/detail/{publishers}', [PublisherController::class, 'show']);
+});
+    
+
 // Route::get('/about', function () {
 //     return view('about');
 // });

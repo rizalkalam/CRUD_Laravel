@@ -11,14 +11,14 @@ class BookController extends Controller
 {
     public function index()
     {
-        return view('book',[
+        return view('book.all',[
             'books'=>Book::all()
         ]);
     }
 
     public function show(Book $book)
     {
-        return view('detail_book', [
+        return view('book.detail', [
             'book'=>$book
         ]);    
         
