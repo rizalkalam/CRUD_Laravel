@@ -27,6 +27,11 @@ Route::get('/about', [AboutController::class, 'index']);
 Route::group(["prefix" => "/book"], function(){
     Route::get('/all', [BookController::class, 'index']);
     Route::get('/detail/{book}', [BookController::class, 'show']);
+    Route::get('/create', [BookController::class, 'create']);
+    Route::post('/add', [BookController::class, 'store']);
+    Route::delete('/delete/{book}', [BookController::class, 'destroy']);
+    Route::get('/edit/{book}', [BookController::class, 'edit']);
+    Route::post('/update/{book}', [BookController::class, 'update']);
 });
 
 Route::group(["prefix"=>"/publisher"], function(){

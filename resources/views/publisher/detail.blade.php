@@ -7,11 +7,11 @@
           <input type="text" class="form-control" id="nama" name="nama" value="{{ $publisher->nama }}" readonly>
         </div>
         <div class="mb-3">
-            <label >Pengarang</label>
+            <label >Email</label>
             <input type="text" class="form-control" id="publisher" name="publisher" value="{{ $publisher->email }}" readonly>
           </div>
           <div class="mb-3">
-            <label >Harga</label>
+            <label >Alamat</label>
             <input type="text" class="form-control" id="harga" name="harga" value="{{ $publisher->alamat }}" readonly>
           </div>
         
